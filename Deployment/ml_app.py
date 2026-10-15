@@ -1,11 +1,17 @@
+
 import pickle
 import numpy as np
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
-df = pd.read_csv("Final_Project.csv")
-pickle_in = open('regression_model.pkl','rb')
-reg = pickle.load(pickle_in)
+BASE_DIR = Path(__file__).resolve().parent
+
+df = pd.read_csv(BASE_DIR / "Final_Project.csv")
+
+with open(BASE_DIR / "regression_model.pkl", "rb") as pickle_in:
+    reg = pickle.load(pickle_in)
+
 
 def predict_price(Area_SqFt,Floor_No,Bedroom):
     x = np.zeros(7)
