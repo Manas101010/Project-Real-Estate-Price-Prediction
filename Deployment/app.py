@@ -1,7 +1,10 @@
+from pathlib import Path
 import pickle
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as stc
+BASE_DIR = Path(__file__).resolve().parent
+IMG_DIR = BASE_DIR / "IMG"
 
 # importing the smaller apps
 from ml_app import run_ml_app
@@ -21,7 +24,7 @@ def main():
 	choice = st.sidebar.selectbox("Menu", menu)
 
 	if choice=="Home":
-		img1 = Image.open("IMG\Realty_Growth.jpg")
+		img1 = Image.open(IMG_DIR / "Realty_Growth.jpg")
 		st.image(img1)
 		st.write("""
 				### Thinking Ahead
@@ -39,9 +42,9 @@ def main():
 	elif choice == "Prediction":
 		run_ml_app()
 	else:
-		path_to_html = ("IMG\mumbai_property.html")
+path_to_html = IMG_DIR / "mumbai_property.html"
 
-		with open(path_to_html,'r') as f: 
+with open(path_to_html, "r", encoding="utf-8") as f:
 			html_data = f.read()
 
 		st.subheader("Data points which is working on the project :")
