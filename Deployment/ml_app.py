@@ -24,7 +24,7 @@ def predict_price(Area_SqFt,Floor_No,Bedroom):
 
 def run_ml_app():
     st.subheader('Please enter the required details :')
-    Location = st.selectbox('Select the Location',(df['Region'].sort_values().unique()))
+    #Location = st.selectbox('Select the Location',(df['Region'].sort_values().unique()))
     Area_SqFt = st.slider("Select Total Area in SqFt",500,int(max(df['Area_SqFt'])),step=100)    
     Floor_No = st.selectbox("Enter Floor Number",(df['Floor_No'].sort_values().unique()))
     Bathroom = st.selectbox("Enter Number of Bathroom",(df['Bathroom'].sort_values().unique()))
