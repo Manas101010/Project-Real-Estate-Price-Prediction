@@ -42,9 +42,9 @@ def main():
 	elif choice == "Prediction":
 		run_ml_app()
 	else:
-path_to_html = IMG_DIR / "mumbai_property.html"
-
-with open(path_to_html, "r", encoding="utf-8") as f:
+		path_to_html = IMG_DIR / "mumbai_property.html"
+		
+		with open(path_to_html, "r", encoding="utf-8") as f:
 			html_data = f.read()
 
 		st.subheader("Data points which is working on the project :")
