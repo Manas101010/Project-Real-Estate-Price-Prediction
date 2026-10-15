@@ -13,7 +13,7 @@ from eda_app import run_eda_app
 html_temp = """
 			<div style="background-color:#8A9A5B;padding:10px;border-radius:10px">
 			<h1 style="color:white;text-align:center;"> Real Estate Price Prediction</h1>
-			<h3 style="color:white;text-align:center;"> Presented by : Shanu Halli </h3>
+			<h3 style="color:white;text-align:center;"> Presented by : Keemaya Patil </h3>
 			</div>
 			"""
 
@@ -53,9 +53,9 @@ def main():
 		st.subheader("About :")
 		
 		socials = ["LinkedIn", "Github", "GMail"]
-		linkedin = "https://www.linkedin.com/in/hallishanu"
-		github = "https://github.com/shanuhalli"
-		mail = "shanuhalli@gmail.com"
+		linkedin = "linkedin.com/in/keemaya-patil-0103042507srs"
+		github = "https://github.com/patilkeemayas0103-ctrl"
+		mail = "patilkeemayas0103@gmail.com"
 		
 		with st.expander("Check my Socials Links"):
 			a = st.selectbox("Socials", socials)
