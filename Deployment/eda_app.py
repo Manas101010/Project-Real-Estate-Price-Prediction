@@ -1,6 +1,12 @@
+
+from pathlib import Path
 import pandas as pd
 from PIL import Image
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+IMG_DIR = BASE_DIR / "IMG"
+
 
 def run_eda_app():
 	st.subheader("Real Estate : Data Analysis")
